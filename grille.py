@@ -10,7 +10,7 @@ class Grille:
             print(ligne)
     
     def tirer(ligne, colonne):
-        if Grille[ligne*self.colonnes][colonne]=="~":
+        if Grille[ligne*self.colonnes][colonne]==self.vide
             Grille[ligne*self.colonnes][colonne]="x"
             print("raté")
         if Grille[ligne*self.colonnes][colonne]=="x":

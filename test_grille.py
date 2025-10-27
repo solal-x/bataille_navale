@@ -8,3 +8,7 @@ def test_init():
     
     print("\n Test 'test_init' réussi : L'objet Grille a été créé avec succès.")
 test_init()
+
+def test_tir():
+    grille_test=Grille()
+    
