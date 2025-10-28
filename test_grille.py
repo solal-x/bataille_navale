@@ -9,6 +9,16 @@ def test_init():
     print("\n Test 'test_init' réussi : L'objet Grille a été créé avec succès.")
 test_init()
 
+print("Début test tir")
+
 def test_tir():
     grille_test=Grille()
-    
+    grille_test.tirer(0,0)
+    assert grille_test.grille[0][0] == 'x'
+    grille_test.tirer(0,0)
+    assert grille_test.grille[0][0] == 'x'
+    assert grille_test.tirer(-1,0) == False
+
+test_tir()
+
+print("Fin test tir")  
