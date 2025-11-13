@@ -24,7 +24,6 @@ def test_tir():
     assert grille_test.grille[0][0] == 'x'
     assert grille_test.tirer(-1, 0) == False
 
-
 test_tir()
+print("Fin test tir")
 
-print("Fin test tir")  
