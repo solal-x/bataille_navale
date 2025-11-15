@@ -5,13 +5,14 @@ class Bateau:
         self.longueur = longueur
         self.vertical = vertical
 
-    def positions():
+    @property
+    def positions(self):
         liste_pos = []
         if self.vertical:
             for i in range(self.longueur):
-                liste_pos.append(self.ligne + i, self.colonne)
+                liste_pos.append((self.ligne + i, self.colonne))
         else:
             for i in range(self.longueur):
-                liste_pos.append(self.ligne, self.colonne + i)
+                liste_pos.append((self.ligne, self.colonne + i))
         return liste_pos
     

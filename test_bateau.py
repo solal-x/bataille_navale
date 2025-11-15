@@ -13,6 +13,13 @@ def test_init():
 test_init()
 
 def test_pos():
-    assert Bateau(2, 3, longueur=3).positions() == [(2, 3), (2, 4), (2, 5)]
-    Bateau(2, 3, longueur=3, vertical=True).positions() == [(2, 3), (3, 3), (4, 3)]
+    b1 = Bateau(2, 3, longueur=3)
+    b2 = Bateau(2, 3, longueur=3, vertical=True)
+    attendu1 = [(2, 3), (2, 4), (2, 5)]
+    attendu2 = [(2, 3), (3, 3), (4, 3)]
+    obtenu1 = b1.positions
+    obtenu2 = b2.positions
+    assert obtenu1 == attendu1 and obtenu2 == attendu2
+    print("test_pos réussi") 
     
+test_pos()
