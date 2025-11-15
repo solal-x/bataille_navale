@@ -16,3 +16,11 @@ class Bateau:
                 liste_pos.append((self.ligne, self.colonne + i))
         return liste_pos
     
+    def chevauchement(self, autre_bateau):
+        liste_chevauchements = []
+        positions_self = set(self.positions)
+        positions_autre = set(autre_bateau.positions)
+        liste_chevauchements = positions_self.intersection(positions_autre)
+        return len(liste_chevauchements) > 0
+
+      

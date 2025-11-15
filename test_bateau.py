@@ -1,4 +1,5 @@
 from bateau import Bateau
+from grille import Grille
 
 def test_init():
     ligne_test = 10
@@ -23,3 +24,13 @@ def test_pos():
     print("test_pos réussi") 
     
 test_pos()
+
+def test_chev():
+    b1 = Bateau(2, 3, longueur=3)
+    b2 = Bateau(2, 3, longueur=3, vertical=True)
+    assert b1.chevauchement(b2) == 1
+    b3 = Bateau(3, 3, longueur=3, vertical=True)
+    assert b1.chevauchement(b3) == 0
+    print("test_chevauchement réussi")
+
+test_chev()

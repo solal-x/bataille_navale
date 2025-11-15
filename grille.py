@@ -1,3 +1,6 @@
+from bateau import Bateau
+
+
 class Grille:
     vide = "~"
     
@@ -7,8 +10,9 @@ class Grille:
         self.grille = [self.vide for i in range(self.colonnes*self.lignes)]
 
     def afficher(self):
-        for ligne in self.grille:
-            print(ligne)
+        for i in range (0, len(self.grille), self.colonnes):
+            ligne = self.grille[i : i + self.colonnes]
+            print(" ".join(ligne))
     
     def tirer(self, ligne, colonne):
         if not (0 <= ligne < self.lignes and 0 <= colonne < self.colonnes):
@@ -25,3 +29,12 @@ class Grille:
             elif case == 'x':
                 print("déjà tiré ici")
    
+    def ajoute(self, bateau):
+        for (ligne, colonne) in bateau.positions:
+            if not (0 <= ligne < self.lignes and 0 <= colonne < self.colonnes):
+                return False
+            if self.grille[ligne*self.colonnes + colonne] != self.vide:
+                return False
+        for (ligne, colonne) in bateau.positions:
+            self.grille[ligne*self.colonnes + colonne] = "o"
+        return True     
