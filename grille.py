@@ -1,5 +1,5 @@
-
-
+import random
+from bateau import Bateau
 
 class Grille:
     vide = "~"
@@ -41,4 +41,4 @@ class Grille:
         for (ligne, colonne) in bateau.positions:
             self.grille[ligne*self.colonnes + colonne] = "o"
         return True     
-    
+   

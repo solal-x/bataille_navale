@@ -1,4 +1,4 @@
-from grille import Grille
+
 
 class Bateau:
     def __init__(self, ligne, colonne, longueur=1, vertical=False):
@@ -38,31 +38,19 @@ class Bateau:
 
 class porte_avion(Bateau):
     def __init__(self, ligne, colonne, longueur=4, vertical=False):
-        self.ligne = ligne
-        self.colonne = colonne
-        self.longueur = longueur
-        self.vertical = vertical
+        super().__init__(ligne, colonne, longueur=4, vertical=vertical)
 
 
 class croiseur(Bateau):
     def __init__(self, ligne, colonne, longueur=3, vertical=False):
-        self.ligne = ligne
-        self.colonne = colonne
-        self.longueur = longueur
-        self.vertical = vertical
+        super().__init__(ligne, colonne, longueur=3, vertical=vertical)
 
 
 class torpilleur(Bateau):
     def __init__(self, ligne, colonne, longueur=2, vertical=False):
-        self.ligne = ligne
-        self.colonne = colonne
-        self.longueur = longueur
-        self.vertical = vertical
+        super().__init__(ligne, colonne, longueur=2, vertical=vertical)
 
 
 class sous_marin(Bateau):
     def __init__(self, ligne, colonne, longueur=2, vertical=False):
-        self.ligne = ligne
-        self.colonne = colonne
-        self.longueur = longueur
-        self.vertical = vertical
+        super().__init__(ligne, colonne, longueur=2, vertical=vertical)
