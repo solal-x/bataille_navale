@@ -3,6 +3,17 @@ from grille import Grille
 from bateau import sous_marin, torpilleur, croiseur, porte_avion
 import random
 
+<<<<<<< Updated upstream
+=======
+
+class Couleur:
+    VIDE = '\033[94m'  
+    BATEAU = '\033[92m'  # Vert pour le bateau non touché (sur la grille joueur)
+    TOUCHE = '\033[91m'  # Rouge pour un tir réussi (touché 'x')
+    RATE = '\033[96m'  
+    FIN = '\033[0m'     #
+
+>>>>>>> Stashed changes
 nombre_lignes, nombre_colonnes = 8, 10
 Grille_de_jeu = Grille(nombre_lignes, nombre_colonnes)
 Liste_bateaux = [sous_marin, torpilleur, croiseur, porte_avion]
