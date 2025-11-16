@@ -1,3 +1,5 @@
+from grille import Grille
+
 class Bateau:
     def __init__(self, ligne, colonne, longueur=1, vertical=False):
         self.ligne = ligne
@@ -22,5 +24,45 @@ class Bateau:
         positions_autre = set(autre_bateau.positions)
         liste_chevauchements = positions_self.intersection(positions_autre)
         return len(liste_chevauchements) > 0
-
+    
+    def coulé(self, grille):
+        emplacement = self.positions
+        for ligne, colonne in emplacement:
+            index = ligne * grille.colonnes + colonne
+            degats = grille.grille[index]
+            if degats != 'x':
+                return False
+        print('coulé !')
+        return True
       
+
+class porte_avion(Bateau):
+    def __init__(self, ligne, colonne, longueur=4, vertical=False):
+        self.ligne = ligne
+        self.colonne = colonne
+        self.longueur = longueur
+        self.vertical = vertical
+
+
+class croiseur(Bateau):
+    def __init__(self, ligne, colonne, longueur=3, vertical=False):
+        self.ligne = ligne
+        self.colonne = colonne
+        self.longueur = longueur
+        self.vertical = vertical
+
+
+class torpilleur(Bateau):
+    def __init__(self, ligne, colonne, longueur=2, vertical=False):
+        self.ligne = ligne
+        self.colonne = colonne
+        self.longueur = longueur
+        self.vertical = vertical
+
+
+class sous_marin(Bateau):
+    def __init__(self, ligne, colonne, longueur=2, vertical=False):
+        self.ligne = ligne
+        self.colonne = colonne
+        self.longueur = longueur
+        self.vertical = vertical

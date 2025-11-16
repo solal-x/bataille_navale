@@ -1,6 +1,11 @@
 
 from grille import Grille
+from bateau import Bateau, sous_marin, torpilleur, croiseur, porte_avion
 
-grille_check = Grille(lignes=3, colonnes=3)
-grille_check.tirer(0, 0)
-grille_check.afficher()
+Grille_de_jeu = Grille(8, 10)
+Liste_bateaux = [sous_marin, torpilleur, croiseur, porte_avion]
+
+for boat in Liste_bateaux:
+    Grille_de_jeu.ajoute(boat)
+    Liste_bateaux.pop(boat)
+    for autres in Liste_bateaux
