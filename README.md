@@ -1,0 +1,41 @@
+# ⚓ Projet Bataille Navale
+
+Ce dépôt contient l'implémentation console du jeu classique de la Bataille Navale (Battleship) en Python. Le jeu oppose un joueur humain à une grille de 8x10 sur laquelle 4 bateaux sont placés aléatoirement sans chevauchement.
+
+## 🎯 Fonctionnalités du Jeu
+
+* **Grille de Jeu :** 8 lignes et 10 colonnes.
+* **Bateaux :** Un porte-avion, un croiseur, un torpilleur et un sous-marin sont placés aléatoirement au début de chaque partie.
+* **Logique de Tir :** Le joueur entre les coordonnées de tir (`LIGNE,COLONNE`).
+* **Condition de Victoire :** La partie se termine lorsque tous les bateaux sont coulés.
+
+## ⚙️ Installation et Exécution
+
+Suivez les étapes ci-dessous pour installer et lancer le jeu.
+
+### Prérequis
+
+Assurez-vous d'avoir Python 3 installé sur votre système.
+
+### 1. Cloner le Dépôt
+
+Ouvrez votre terminal et clonez ce dépôt :
+
+```bash
+git clone [VOTRE LIEN GITHUB]
+cd bataille_navale
+
+# Créer l'environnement virtuel (le nom 'venv' est le plus courant)
+python -m venv venv
+
+# Activer l'environnement virtuel
+# Sur Windows (Command Prompt) :
+# venv\Scripts\activate
+# Sur Linux/macOS ou Windows (Git Bash/PowerShell) :
+. venv/bin/activate
+
+pip install -r requirements.txt
+
+python main.py
+
+pytest
