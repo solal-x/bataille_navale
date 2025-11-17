@@ -22,7 +22,7 @@ Assurez-vous d'avoir Python 3 installé sur votre système.
 Ouvrez votre terminal et clonez ce dépôt :
 
 ```bash
-git clone [VOTRE LIEN GITHUB]
+git clone https://github.com/solal-x/bataille_navale
 cd bataille_navale
 
 # Créer l'environnement virtuel (le nom 'venv' est le plus courant)
