@@ -27,6 +27,11 @@ cd bataille_navale
 
 # Créer l'environnement virtuel (le nom 'venv' est le plus courant)
 python -m venv venv
+# Si cela ne mache pas, essayer
+python3 -m venv venv
+# Ou
+py -m venv venv
+
 
 # Activer l'environnement virtuel
 # Sur Windows (Command Prompt) :
