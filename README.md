@@ -34,7 +34,7 @@ python -m venv venv
 # Sur Linux/macOS ou Windows (Git Bash/PowerShell) :
 . venv/bin/activate
 
-pip install -r requirements.txt
+pip install -r requirement.txt
 
 python main.py
 
