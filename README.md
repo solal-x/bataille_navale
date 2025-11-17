@@ -32,6 +32,7 @@ python3 -m venv venv
 # Ou
 py -m venv venv
 
+# pour la suite, remplacer "python" par python3 ou py selon lequel vous a permis de créer le venv
 
 # Activer l'environnement virtuel
 # Sur Windows (Command Prompt) :
@@ -41,6 +42,10 @@ py -m venv venv
 
 pip install -r requirement.txt
 
+# le main sans interface travaillée
 python main.py
+
+# le main avec une interface un peu plus jolie, faite avec l'aide d'une ia pour les couleurs et l'actualisation
+python main_interface.py
 
 pytest
