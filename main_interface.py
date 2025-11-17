@@ -189,3 +189,4 @@ if __name__ == "__main__":
         jouer_partie(grille_du_jeu, bateaux_du_jeu)
     else:
         print("Le jeu n'a pas pu être initialisé correctement.")
+        
